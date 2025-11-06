@@ -1,5 +1,5 @@
 ### Copy files using scp from source server
-####Example copy all files and subdirectory
+Example copy all files and subdirectory
 ```
 scp -r /home/backup/ userA@192.168.xx.xx:/home/admin/logs/
 ```
@@ -7,7 +7,7 @@ scp -r /home/backup/ userA@192.168.xx.xx:/home/admin/logs/
 <br>
 
 ### Copy files using scp from destination server
-####Example copy all files and subdirectory
+Example copy all files and subdirectory
 ```
 scp -r userA@192.168.xx.xx:/home/admin/logs/ /home/backup/
 ```
