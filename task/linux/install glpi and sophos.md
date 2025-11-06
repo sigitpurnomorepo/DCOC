@@ -13,6 +13,8 @@ chmod 754 SophosSetup.sh
 ```
 7. Cek apakah asset vm sudah ada di Sophos Central
 
+<br><br>
+
 ### Install GLPI
 1. Copy file glpi to server
 
