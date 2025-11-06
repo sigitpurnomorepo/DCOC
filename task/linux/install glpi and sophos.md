@@ -13,17 +13,15 @@ chmod 754 SophosSetup.sh
 ```
 7. Cek apakah asset vm sudah ada di Sophos Central
 
-
----
-
-
 ### Install GLPI
 1. Copy file glpi to server
 
 2. Enable permission to execute
+```bash
 chmod 754 glpi-agent-1.15-x86_64.AppImage
-
-3. Install GLPI
+```
+4. Install GLPI
+```bash
 ./glpi-agent-1.15-x86_64.AppImage --install --server http://10.129.2.174/plugins/glpiinventory
-
-4. Cek asset vm di comit.pgn.co.id
+```
+6. Cek asset vm di comit.pgn.co.id
