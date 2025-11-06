@@ -1,14 +1,17 @@
 ### Install Sophos 
 1. Download Sophos
+```bash
 wget https://api-cloudstation-us-east-2.prod.hydra.sophos.com/api/download/56cfc53f70a5983de1a180ff106e9ce1/SophosSetup.sh
-
-2. Enable permission to execute
+```
+3. Enable permission to execute
+```bash
 chmod 754 SophosSetup.sh
-
-3. Install Sophos
+```
+5. Install Sophos
+```bash
 ./SophosSetup.sh
-
-4. Cek apakah asset vm sudah ada di Sophos Central
+```
+7. Cek apakah asset vm sudah ada di Sophos Central
 
 
 ---
