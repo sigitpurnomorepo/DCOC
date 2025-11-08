@@ -57,16 +57,36 @@ else
 fi
 ```
 
-Note: <br>
-$? : Exit status dari perintah terakhir, maksudnya (exit code) dari perintah yang dijalankan sebelumnya — dalam kasus ini dari grep <br>
--eq : Operator perbandingan numerik (equal), Berarti “sama dengan”. Jadi ```[ $? -eq 0 ]``` artinya: “Apakah exit code sama dengan 0?” <br>
+Note: 
+
+$? : Exit status dari perintah terakhir, maksudnya (exit code) dari perintah yang dijalankan sebelumnya — dalam kasus ini dari grep 
+
+-eq : Operator perbandingan numerik (equal), Berarti “sama dengan”. Jadi ```[ $? -eq 0 ]``` artinya: “Apakah exit code sama dengan 0?” 
+
 0 : Nilai sukses, Dalam konvensi Linux, ```0``` berarti sukses, sedangkan nilai selain ```0``` berarti gagal atau tidak ditemukan
 
 <br><br>
 
 ## Find
 
+Cara paling sederhana (pakai if dan subshell)
+```
+if find /var/lib/containers/ -type f -name "upload_ff917c75dddea7887b58a59b3d49aac7" -mtime -2 | grep -q .; then
+    echo "✅ File ditemukan."
+else
+    echo "❌ File tidak ditemukan."
+fi
+```
+Note:
+
+- find ... | grep -q . → akan bernilai true kalau ada output (file ditemukan), kemudian kondisional pertama dijalankan.
+
+- Kalau tidak ada output, maka false, dan bagian else akan dijalankan.
+
+- grep -q . digunakan agar tidak mengeluarkan output ```find```, karena ingin bypass ke conditional ```if```  
+
 Cara singkat (one-liner di terminal)
+
 ```
 find /var/lib/containers/ -type f -name "upload_ff917c75dddea7887b58a59b3d49aac7" -mtime -2 | grep -q . && echo "✅ File ditemukan" || echo "❌ File tidak ditemukan"
 ```
@@ -78,7 +98,7 @@ Note: <br>
 
 Kalau ingin menampilkan lokasi file jika ada
 ```
-result=$(find /var/lib/containers/ -type f -name "upload_ff917c75dddea7887b58a59b3d49aac7" -mtime -2)
+result=$(find /var/lib/containers/ -type f -name "upload_5adf67ae103564969105ab11a4dd2725" -mtime -2)
 
 if [ -n "$result" ]; then
     echo "✅ File ditemukan di lokasi berikut:"
