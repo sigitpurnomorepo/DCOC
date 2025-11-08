@@ -57,6 +57,6 @@ else
 fi
 ```
 
-Note: 
+Note: <br>
 $? : Exit status dari perintah terakhir, maksudnya (exit code) dari perintah yang dijalankan sebelumnya — dalam kasus ini dari grep <br>
 -eq : Operator perbandingan numerik (equal), Berarti “sama dengan”. Jadi ```[ $? -eq 0 ]``` artinya: “Apakah exit code sama dengan 0?”
