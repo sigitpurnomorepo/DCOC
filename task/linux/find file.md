@@ -83,7 +83,9 @@ Note:
 
 - Kalau tidak ada output, maka false, dan bagian else akan dijalankan.
 
-- grep -q . digunakan agar tidak mengeluarkan output ```find```, karena ingin bypass ke conditional ```if```  
+- grep -q . → digunakan agar tidak mengeluarkan output ```find```, karena ingin bypass ke conditional ```if```
+
+
 
 Cara singkat (one-liner di terminal)
 
