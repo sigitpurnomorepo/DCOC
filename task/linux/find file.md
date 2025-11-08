@@ -56,3 +56,7 @@ else
   echo "❌ Tidak ada aktivitas mencurigakan ditemukan."
 fi
 ```
+
+Note: 
+$? : Exit status dari perintah terakhir, maksudnya (exit code) dari perintah yang dijalankan sebelumnya — dalam kasus ini dari grep
+-eq : Operator perbandingan numerik (equal), Berarti “sama dengan”. Jadi ```[ $? -eq 0 ]``` artinya: “Apakah exit code sama dengan 0?”
