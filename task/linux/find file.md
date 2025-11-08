@@ -85,17 +85,15 @@ Note:
 
 - grep -q . → digunakan agar tidak mengeluarkan output ```find```, karena ingin bypass ke conditional ```if```
 
-
-
+<br>
 
 Cara singkat (one-liner di terminal)
-
 ```
 find /var/lib/containers/ -type f -name "upload_ff917c75dddea7887b58a59b3d49aac7" -mtime -2 | grep -q . && echo "✅ File ditemukan" || echo "❌ File tidak ditemukan"
 ```
 Note: <br>
-&& → jalan kalau hasil sebelumnya sukses (file ada). <br>
-|| → jalan kalau hasil sebelumnya gagal (file tidak ada). 
+- && → jalan kalau hasil sebelumnya sukses (file ada). <br>
+- || → jalan kalau hasil sebelumnya gagal (file tidak ada). 
 
 <br>
 
@@ -113,8 +111,9 @@ fi
 contoh:
 <img width="1180" height="71" alt="image" src="https://github.com/user-attachments/assets/af6f3baf-4505-4d0f-8f0d-c2a5ca809d92" />
 
+<br>
 
-
+Menggunakan shell script
 ```
 #!/bin/bash
 # Script untuk memeriksa apakah file tertentu ada di dalam folder /var/lib/containers/
@@ -149,7 +148,6 @@ else
     echo "❌ File '$TARGET_FILE' tidak ditemukan dalam 2 hari terakhir."
 fi
 ```
-
 contoh:
 ```
 ./check_upload_file.sh upload_ff917c75dddea7887b58a59b3d49aac7
