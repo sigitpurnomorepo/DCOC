@@ -19,11 +19,18 @@ Note:
 
 - if ...; then ... else ... fi → menentukan hasil output di terminal
 
-  
 
+
+Kalau ingin sekalian melihat hasil baris yang cocok:
 ```
 grep -E "upload_|POST|eval|base64_decode" /var/log/nginx/access.log && echo "✅ Ditemukan entri mencurigakan!" || echo "❌ Tidak ada aktivitas mencurigakan."
 ```
+Note:
+
+- && jalan kalau grep menemukan hasil,
+
+- || jalan kalau tidak ada hasil.
+
 
 1. membuat shell script untuk mencari pola tertentu di file log Nginx /var/log/nginx/access.log
 ```
