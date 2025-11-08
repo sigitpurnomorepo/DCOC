@@ -1,4 +1,4 @@
-## Grep
+## Mencari baris text yang ada pada sebuah file menggunakan Grep
 1. membuat shell script untuk mencari pola tertentu di file log Nginx /var/log/nginx/access.log
 ```
 #!/bin/bash
@@ -31,7 +31,7 @@ else
 fi
 ```
 
-2. membuat shell script untuk mencari pola tertentu di file log Nginx /var/log/nginx/access.log tanpa ensure file log ada
+2. membuat shell script untuk mencari pola tertentu di file log Nginx /var/log/nginx/access.log tanpa memastikan file log ada
 ```
 #!/bin/bash
 # ================================================
@@ -59,21 +59,33 @@ fi
 
 Note: 
 
-$? : Exit status dari perintah terakhir, maksudnya (exit code) dari perintah yang dijalankan sebelumnya — dalam kasus ini dari grep 
+- $? : Exit status dari perintah terakhir, maksudnya (exit code) dari perintah yang dijalankan sebelumnya — dalam kasus ini dari grep 
 
--eq : Operator perbandingan numerik (equal), Berarti “sama dengan”. Jadi ```[ $? -eq 0 ]``` artinya: “Apakah exit code sama dengan 0?” 
+- -eq : Operator perbandingan numerik (equal), Berarti “sama dengan”. Jadi ```[ $? -eq 0 ]``` artinya: “Apakah exit code sama dengan 0?” 
 
-0 : Nilai sukses, Dalam konvensi Linux, ```0``` berarti sukses, sedangkan nilai selain ```0``` berarti gagal atau tidak ditemukan
+- 0 : Nilai sukses, Dalam konvensi Linux, ```0``` berarti sukses, sedangkan nilai selain ```0``` berarti gagal atau tidak ditemukan
+
+- Opsi -E artinya: gunakan extended regular expressions (ERE)
+
+  - Dengan -E, kamu bisa memakai tanda seperti | untuk OR (atau).
+
+  - Tanpa -E, tanda | akan dianggap karakter biasa.
 
 <br><br>
 
-## Find
+## Mencari file yang ada di dalam directory menggunakan Find
 
 Cara paling sederhana (pakai if dan subshell)
 ```
-if find /var/lib/containers/ -type f -name "upload_ff917c75dddea7887b58a59b3d49aac7" -mtime -2 | grep -q .; then
+if find /var/log/nginx/ -type f -name "access.log-20251030.gz" -mtime -2 | grep -q .; then
+    echo
+    echo
+    echo "Result:"
     echo "✅ File ditemukan."
 else
+    echo
+    echo
+    echo "Result:"
     echo "❌ File tidak ditemukan."
 fi
 ```
@@ -84,6 +96,13 @@ Note:
 - Kalau tidak ada output, maka false, dan bagian else akan dijalankan.
 
 - grep -q . → digunakan agar tidak mengeluarkan output ```find```, karena ingin bypass ke conditional ```if```
+
+- -mtime: Stands for "modification time".
+  - -2: Means "less than 2 * 24 hours ago" (i.e., within the last 48 hours).
+  - -n → less than n days ago
+  - n → exactly n days ago
+  - +n → more than n days ago
+
 
 <br>
 
@@ -99,17 +118,25 @@ Note: <br>
 
 Kalau ingin menampilkan lokasi file jika ada
 ```
-result=$(find /var/lib/containers/ -type f -name "upload_5adf67ae103564969105ab11a4dd2725" -mtime -2)
+result=$(find /var/log/nginx/ -type f -name "*access.log-202511*.gz")
 
 if [ -n "$result" ]; then
+    echo
+    echo
+    echo
+    echo
     echo "✅ File ditemukan di lokasi berikut:"
     echo "$result"
 else
-    echo "❌ File tidak ditemukan dalam 2 hari terakhir."
+    echo
+    echo
+    echo
+    echo
+    echo "❌ File tidak ditemukan."
 fi
 ```
 contoh:
-<img width="1180" height="71" alt="image" src="https://github.com/user-attachments/assets/af6f3baf-4505-4d0f-8f0d-c2a5ca809d92" />
+<img width="317" height="166" alt="image" src="https://github.com/user-attachments/assets/8e0658d0-a68c-41d2-8bbd-29c74e96c41a" />
 
 <br>
 
