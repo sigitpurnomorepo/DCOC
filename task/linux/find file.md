@@ -1,4 +1,30 @@
 ## Mencari baris text yang ada pada sebuah file menggunakan Grep
+
+```
+if grep -q -E "upload_|POST|eval|base64_decode" /var/log/nginx/access.log; then
+  echo "✅ Ditemukan entri yang mencurigakan!"
+else
+  echo "❌ Tidak ada aktivitas mencurigakan ditemukan."
+fi
+```
+Note:
+
+- grep -q → jalankan pencarian diam-diam (quiet mode, tidak tampilkan hasil)
+
+- -E → aktifkan regex (supaya | bisa dipakai sebagai “OR”)
+
+- "upload_|POST|eval|base64_decode" → pola yang dicari
+
+- /var/log/nginx/access.log → file log Nginx yang diperiksa
+
+- if ...; then ... else ... fi → menentukan hasil output di terminal
+
+  
+
+```
+grep -E "upload_|POST|eval|base64_decode" /var/log/nginx/access.log && echo "✅ Ditemukan entri mencurigakan!" || echo "❌ Tidak ada aktivitas mencurigakan."
+```
+
 1. membuat shell script untuk mencari pola tertentu di file log Nginx /var/log/nginx/access.log
 ```
 #!/bin/bash
