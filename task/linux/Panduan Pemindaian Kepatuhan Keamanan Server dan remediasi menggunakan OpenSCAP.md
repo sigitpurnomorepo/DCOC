@@ -1,7 +1,9 @@
 ## Panduan Pemindaian Kepatuhan Keamanan Server dan remediasi menggunakan OpenSCAP
 
 1. Pastikan pada saat instal vm pilih Security Profil dan pilih ANSSI-BP-028 (minimal), untuk meminimalisir remediasi secara manual
+   
    <img width="805" height="488" alt="image" src="https://github.com/user-attachments/assets/09a8c5ba-8be8-4010-952f-a2f54e285869" />
+   
    <img width="805" height="559" alt="image" src="https://github.com/user-attachments/assets/c46718a5-2344-402b-a5ee-ee9f186faca6" />
 
 <br>
@@ -50,14 +52,14 @@ oscap info /usr/share/xml/scap/ssg/content/ssg-ol9-ds.xml
 	minclass=4
 	rounds=65536
 ```
-  - Menerapkan kebijakan penguncian akun setelah gagal login /etc/security/faillock.conf
+   - Menerapkan kebijakan penguncian akun setelah gagal login /etc/security/faillock.conf
 ```
 	deny = 3
 	even_deny_root
 	fail_interval = 900
 	unlock_time = 900
 ```
-  - Menentukan jumlah histori password yang tidak boleh digunakan ulang /etc/security/pwhistory.conf
+   - Menentukan jumlah histori password yang tidak boleh digunakan ulang /etc/security/pwhistory.conf
 ```
 	remember = 2
 ```
