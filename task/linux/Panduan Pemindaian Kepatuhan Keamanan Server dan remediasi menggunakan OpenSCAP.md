@@ -42,7 +42,7 @@ oscap info /usr/share/xml/scap/ssg/content/ssg-ol9-ds.xml
 
 6. Konfigurasi parameter keamanan terkait password dan autentikasi
 
-   - Mengatur kompleksitas dan panjang minimal password ```/etc/security/pwquality.conf```
+   - Mengatur kompleksitas dan panjang minimal password `/etc/security/pwquality.conf`
    ```
 	dcredit = -1
 	lcredit = -1
