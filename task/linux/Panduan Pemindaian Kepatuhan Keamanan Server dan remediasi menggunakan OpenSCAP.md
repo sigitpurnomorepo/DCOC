@@ -3,8 +3,7 @@
 1. Pastikan pada saat instal vm pilih Security Profil dan pilih ANSSI-BP-028 (minimal), untuk meminimalisir remediasi secara manual
    
    <img width="805" height="488" alt="image" src="https://github.com/user-attachments/assets/09a8c5ba-8be8-4010-952f-a2f54e285869" />
-
-
+<br>
    <img width="805" height="559" alt="image" src="https://github.com/user-attachments/assets/c46718a5-2344-402b-a5ee-ee9f186faca6" />
 
 <br>
