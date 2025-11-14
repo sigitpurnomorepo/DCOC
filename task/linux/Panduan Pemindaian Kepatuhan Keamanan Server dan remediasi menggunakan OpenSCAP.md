@@ -43,7 +43,7 @@ oscap info /usr/share/xml/scap/ssg/content/ssg-ol9-ds.xml
 6. Konfigurasi parameter keamanan terkait password dan autentikasi
 
    - Mengatur kompleksitas dan panjang minimal password /etc/security/pwquality.conf
-```
+   ```
 	dcredit = -1
 	lcredit = -1
 	minlen = 16
@@ -52,18 +52,18 @@ oscap info /usr/share/xml/scap/ssg/content/ssg-ol9-ds.xml
 	retry=3
 	minclass=4
 	rounds=65536
-```
+	```
    - Menerapkan kebijakan penguncian akun setelah gagal login /etc/security/faillock.conf
-```
+   ```
 	deny = 3
 	even_deny_root
 	fail_interval = 900
 	unlock_time = 900
-```
+	```
    - Menentukan jumlah histori password yang tidak boleh digunakan ulang /etc/security/pwhistory.conf
-```
+   ```
 	remember = 2
-```
+	```
 
 <br>
 
