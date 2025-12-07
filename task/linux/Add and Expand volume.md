@@ -1,5 +1,5 @@
-### Add new disk partition LVM
-1. 
+### Add new disk partition
+1. Add new disk partition LVM
 ```
 lsblk
 
