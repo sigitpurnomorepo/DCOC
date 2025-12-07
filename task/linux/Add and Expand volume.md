@@ -33,6 +33,7 @@ df -h -T
 
 2. Add new disk partition EXT4
 ```
+// Cek disk
 lsblk 
 
 // Buat partisi baru
@@ -45,8 +46,7 @@ Partition number: 1      -> nomor partisi (nilai default)
 First sector: (Enter)    -> awal sektor (default)
 Last sector: (Enter)     -> akhir sektor (akhir disk)
 Command (m for help): w  -> save & exit
-
-// Hasilnya partisi baru /dev/sdc1
+  // Hasilnya partisi baru /dev/sdc1
 
 // Format dengan EXT4
 mkfs.ext4 /dev/sdc1
