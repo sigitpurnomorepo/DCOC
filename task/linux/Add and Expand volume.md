@@ -31,7 +31,7 @@ sudo reboot
 df -h -T
 ```
 
-2. Add new disk partition EXT4
+2. Add new disk partition EXT4 with type partition LVM
 ```
 // Cek disk
 lsblk 
@@ -45,11 +45,29 @@ Partition type: p        -> partisi primary
 Partition number: 1      -> nomor partisi (nilai default)
 First sector: (Enter)    -> awal sektor (default)
 Last sector: (Enter)     -> akhir sektor (akhir disk)
-Command (m for help): w  -> save & exit
   // Hasilnya partisi baru /dev/sdc1
 
-// Format dengan EXT4
-mkfs.ext4 /dev/sdc1
+// Change tipe partisi /dev/sdc1 to LVM
+Command (m for help): t  -> mengubah tipe partisi
+Select partition: 1
+Hex code or alias (type L to list all): 8e
+
+// Cek detail informasi partisi
+Command (m for help): p -> cek detail informasi partisi 
+output: Device     Boot Start     End Sectors Size Id Type
+        /dev/sdc1        2048 4194303 4192256   2G 8e Linux LVM
+
+// Write table to disk and exit
+Command (m for help): w  -> Write table to disk and exit
+
+// Create LVM from /DATA
+pvcreate /dev/sdb
+pvs
+vgcreate vg-data /dev/sdb
+sudo vgs
+lvcreate -l 100%FREE -n lv-data vg-data
+lvs
+mkfs.ext4 /dev/vg-data/lv-data
 
 // Buat directory mount point 
 mkdir /DATA
