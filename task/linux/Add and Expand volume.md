@@ -65,7 +65,7 @@ pvcreate /dev/sdb
 pvs
 vgcreate vg-data /dev/sdb
 vgs
-lvcreate -l 100%FREE -n lv-data vg-data
+lvcreate -l +100%FREE -n lv-data vg-data
 lvs
 mkfs.ext4 /dev/vg-data/lv-data
 
