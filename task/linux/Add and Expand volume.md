@@ -9,7 +9,7 @@ sudo pvs
 sudo vgcreate vg-data /dev/sdb
 sudo vgs
 
-sudo lvcreate -l 100%FREE -n lv-data vg-data
+sudo lvcreate -l +100%FREE -n lv-data vg-data
 sudo lvs
 
 sudo mkfs.xfs /dev/vg-data/lv-data
