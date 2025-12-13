@@ -60,7 +60,7 @@ output: Device     Boot Start     End Sectors Size Id Type
 // Write table to disk and exit
 Command (m for help): w  -> Write table to disk and exit
 
-// Create LVM from /DATA
+// Create LVM for /DATA
 pvcreate /dev/sdb
 pvs
 vgcreate vg-data /dev/sdb
