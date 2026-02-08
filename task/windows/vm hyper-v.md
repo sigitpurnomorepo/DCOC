@@ -9,8 +9,6 @@
   - Choose import type: register the VM in-place (use the existing unique ID)
 - Finish
 
-<br>
-
 2. Create new VM using old data VM
 
 - Note path VM file resources 
