@@ -1,6 +1,7 @@
 ### VM failed
-1. Import VM using old data VM
+
 ```
+1. Import VM using old data VM
 - Note path VM file resources 
 - Delete VM in failover cluster manager and hyper-v manager
 - Import VM from hyperv manager
@@ -10,7 +11,6 @@
 - Finish
 
 2. Create new VM using old data VM
-
 - Note path VM file resources 
 - Delete VM in failover cluster manager and hyper-v manager
 - Create new VM from hyperv manager
