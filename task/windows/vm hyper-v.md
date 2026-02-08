@@ -12,7 +12,7 @@
 <br>
 
 2. Create new VM using old data VM
-```
+
 - Note path VM file resources 
 - Delete VM in failover cluster manager and hyper-v manager
 - Create new VM from hyperv manager
