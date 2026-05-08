@@ -27,7 +27,7 @@ sar -u -s 08:00:00 -e 12:00:00 -f /var/log/sa/sa05
 
 - Lihat proses terbesar dari CPU
 ```
-ps aux --sort=-%cpu | head
+ps aux --sort=-%cpu | head -n 6
 ```
 
 - Lihat user pemakai dari CPU
