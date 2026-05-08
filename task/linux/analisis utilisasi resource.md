@@ -11,6 +11,8 @@
 - Lihat history CPU hari ini
 ```
 sar -u
+
+sar -u 1 10
 ```
 
 - Lihat history CPU tanggal tertentu (misal 5 April 2026)
