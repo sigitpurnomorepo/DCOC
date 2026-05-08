@@ -25,6 +25,22 @@ sar -u -s 08:00:00 -e 12:00:00 -f /var/log/sa/sa05
 
 <img width="731" height="300" alt="image" src="https://github.com/user-attachments/assets/a341e859-b42b-4e07-ac03-50d4cd992a9e" />
 
+- Lihat proses terbesar dari CPU
+```
+ps aux --sort=-%cpu | head
+```
+
+- Lihat user pemakai dari CPU
+```
+ps -eo user,%cpu --sort=-%cpu | head
+```
+
+- Lihat user total pemakaian dari CPU
+```
+ps -eo user,%cpu --no-headers | \
+awk '{cpu[$1]+=$2} END {for (u in cpu) print u, cpu[u]}' | \
+sort -k2 -nr
+```
 
 ## Analisis Utilisasi Memory
 
