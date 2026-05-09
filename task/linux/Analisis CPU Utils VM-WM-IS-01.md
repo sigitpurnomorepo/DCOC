@@ -50,6 +50,8 @@
 - Cek file yang dibuka selama proses
 ```
   lsof -p 647753
+
+  lsof -p 647753 | tail -n 20
 ```
 
 - Cek port yang digunakan oleh proses
