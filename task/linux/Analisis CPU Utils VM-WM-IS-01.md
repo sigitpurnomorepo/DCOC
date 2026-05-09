@@ -47,7 +47,7 @@
   pstree -p | grep 647753
 ```
 
-- Cek file yang dibuka selama proses
+- Cek semua file/resource yang sedang dibuka oleh proses based PID
 ```
   lsof -p 647753
 
