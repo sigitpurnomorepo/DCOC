@@ -52,6 +52,12 @@
   lsof -p 647753
 
   lsof -p 647753 | tail -n 20
+
+  lsof -p 647753 | grep TCP
+
+  lsof -p 647753 | grep log
+
+  lsof -p 647753 | grep deleted
 ```
 
 - Cek port yang digunakan oleh proses
