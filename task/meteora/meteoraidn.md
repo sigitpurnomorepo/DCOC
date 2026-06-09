@@ -27,4 +27,8 @@ Note:
                - RSI             = Untuk melihat posisi token sdang over sold atau over bought (ganti Inputs, length = 2 & Smoothing Length = 2)
                - MACD            = Untuk melihat pergerakan token dari parameter histogram merah dan hijau
                - Bolinger Bands  = Untuk melihat batas atas dan bawah pergerakan chart
+           - Jika sudah lihat bagian bawah chart :
+               -  Holders > All  = Untuk melihat top 100 pemegang token, perhatikan pnl nya, jika puluhan ribu kemungkinan akan terjadi penjualan, karena sudah profit, maka hindari
+    - Jika parameter di atas sudah ok, kembali ke tokleo.com, pilih ikon planet warna orange itu adalah pool, dia akan mengarah ke meteora pool tsb :
+        - Total Value Locked   = Total uang yang ada di pool, 
 
