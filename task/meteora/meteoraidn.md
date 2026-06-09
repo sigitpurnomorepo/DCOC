@@ -1,5 +1,6 @@
 ## Memilih Token Pair
 
-### Memiliki Presentasi Kecil Token RUG
-### Memiliki Volume Transaksi Besar
+Note: 
+1. Memiliki Presentasi Kecil Token RUG
+2. Memiliki Volume Transaksi Besar
 
