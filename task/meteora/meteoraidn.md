@@ -23,5 +23,8 @@ Note:
            - Volume di 1-5 menit = Diusahakan di atas 1k
            - Setting chart :
                - Interval 15 menit
-               - 
+               - SuperTrend      = Untuk melihat trend chart, bisa dijadikan garis support & resist
+               - RSI             = Untuk melihat posisi token sdang over sold atau over bought (ganti Inputs, length = 2 & Smoothing Length = 2)
+               - MACD            = Untuk melihat pergerakan token dari parameter histogram merah dan hijau
+               - Bolinger Bands  = Untuk melihat batas atas dan bawah pergerakan chart
 
