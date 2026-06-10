@@ -30,5 +30,13 @@ Note:
            - Jika sudah lihat bagian bawah chart :
                -  Holders > All  = Untuk melihat top 100 pemegang token, perhatikan pnl nya, jika puluhan ribu kemungkinan akan terjadi penjualan, karena sudah profit, maka hindari
     - Jika parameter di atas sudah ok, kembali ke tokleo.com, pilih ikon planet warna orange itu adalah pool, dia akan mengarah ke meteora pool tsb :
-        - Total Value Locked   = Total uang yang ada di pool, 
+        - Total Value Locked   = Total uang yang ada di pool, di bawah 5k warning
+        - Kembali ke toekn yang di tokleo, copy kontrak addressnya dan pastekan di pool meteora untuk melihat ada pool apa saja yang tersedia
+        - Ada pool binstepnya 80 feenya 1.00% dan 200 feenya 2.00%, pilih yang 80 yang feenya paling rendah karena akan banyak yang swap di pool tersebut karena murah
+        - Setelah itu beli tokennya 0.1 SOL
+        - Add position, untuk tokennya pilih max atau 0.1 SOL dan SOL nya pilih 0.4 SOL, porsinya SOL lebih banyak dari tokennya
+        - Untuk min dan max price awalnya pilih di range -95% jika ada warning non refunable SOL, kurangi bertahap sampai warning tersebut hilang
+        - Kenapa beli tokennya juga, karena mengantisipasi jika harga naik dan kita dapat fee, jika hanya SOL saja dan tokennya naik kita akan out of range
+        - Kapan close? jika keuntungannya sudah sesuai keinginan dan perhatikan juga TVL, jika berada di bawah 5k atau 1k itu tanda tokennya sudah sepi dan tidak ada transaksi
+        - 
 
