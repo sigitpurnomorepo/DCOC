@@ -38,5 +38,5 @@ Note:
         - Untuk min dan max price awalnya pilih di range -95% jika ada warning non refunable SOL, kurangi bertahap sampai warning tersebut hilang
         - Kenapa beli tokennya juga, karena mengantisipasi jika harga naik dan kita dapat fee, jika hanya SOL saja dan tokennya naik kita akan out of range
         - Kapan close? jika keuntungannya sudah sesuai keinginan dan perhatikan juga TVL, jika berada di bawah 5k atau 1k itu tanda tokennya sudah sepi dan tidak ada transaksi
-        - 
+        - Perhatikan nilai VOL di GMGN dan TVL di pool meteora, untuk melihat apakah transaksi di token masi banyak atau sudah sepi
 
