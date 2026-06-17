@@ -19,3 +19,9 @@
   - Select use an existing virtual hard disk, and select vhdx file in the VM resources folder
 - Finish
 ```
+
+### Case VM Failed
+- <img width="838" height="221" alt="image" src="https://github.com/user-attachments/assets/302fa7b1-e10b-48bb-b45f-8b6824ee7a6d" />
+  Jika terjadi vm Failed, contoh VM-HQ-GASQT-3
+  <img width="919" height="260" alt="image" src="https://github.com/user-attachments/assets/fc24193e-9003-4f20-803c-c6aceb2d2780" />
+  Cek di hyper-v apakah vm nya ada, jika tidak ada import vm atau create new vm (Create new vm jika file *.vmcx dan *.xml tidak ada di folder file vm di volume)
