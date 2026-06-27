@@ -22,8 +22,11 @@
       Tambahan opsional":
       # Cek policy selinux eksisting
       sudo semanage fcontext -l | grep -E "/DATA|storage"
+
+      # Clear policy yang ada
+      semanage fcontext -d /DATA/pemilu/storage(/.*)?
    ```
- - Setting agar aplikasi dapat konek ke database
+ - Setting agar app yang berjalan di webserver diizinkan melakukan koneksi ke db services melalui jaringan
    ```
      sudo setsebool -P httpd_can_network_connect_db 1
      sudo setsebool -P httpd_can_network_connect 1
