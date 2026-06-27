@@ -28,7 +28,10 @@
    ```
  - Setting agar app yang berjalan di webserver diizinkan melakukan koneksi ke db services melalui jaringan
    ```
+     # Mengizinkan Apache melakukan koneksi jaringan khusus ke layanan database
      sudo setsebool -P httpd_can_network_connect_db 1
+   
+     # Mengizinkan webserver melakukan koneksi jaringan ke berbagai layanan secara umum, termasuk API, SMTP, LDAP, dan layanan lainnya
      sudo setsebool -P httpd_can_network_connect 1
    ```
  - Allow port http dan http di selinux
