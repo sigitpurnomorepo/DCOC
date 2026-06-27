@@ -20,7 +20,13 @@
       sudo restorecon -Rv /DATA/laravel_app
 
       Tambahan opsional":
-      # Cek policy selinux eksisting
+      # Cek policy selinux directory itu sendiri 
+      ls -Zd /etc/nginx/conf.d/vhost
+
+      # Cek policy selinux isi directory
+      ls -Z /etc/nginx/conf.d/vhost
+      
+      # Cek policy selinux eksisting semua 
       sudo semanage fcontext -l | grep -E "/DATA|storage"
 
       # Clear policy yang ada
@@ -33,5 +39,10 @@
    
      # Mengizinkan webserver melakukan koneksi jaringan ke berbagai layanan secara umum, termasuk API, SMTP, LDAP, dan layanan lainnya
      sudo setsebool -P httpd_can_network_connect 1
+
+     # Mengecek setingan eksisting
+     getsebool httpd_can_network_connect_db
+     getsebool httpd_can_network_connect
+     getsebool -a | grep httpd
    ```
  - Allow port http dan http di selinux
