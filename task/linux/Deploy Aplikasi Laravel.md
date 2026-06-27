@@ -4,6 +4,8 @@
  - Ubah permission directory storage dan cache menjadi 775 ```chmod -R 775 /DATA/laravel_app/storage```
  - Allow directory laravel_app, storage, dan cache di selinux
    ```
+      setenforce 0
+   
       sudo semanage fcontext -a -t httpd_sys_rw_content_t "/DATA/laravel_app/storage(/.*)?"
       sudo semanage fcontext -a -t httpd_sys_rw_content_t "/DATA/laravel_app/bootstrap/cache(/.*)?"
       sudo semanage fcontext -a -t httpd_sys_content_t "/DATA/laravel_app(/.*)?"
