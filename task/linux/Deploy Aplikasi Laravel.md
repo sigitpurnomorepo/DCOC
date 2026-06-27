@@ -1,7 +1,11 @@
 ## Deploy App Laravel
  - Buat file config aplikasi /etc/nginx/conf.d/laravel_app.conf
  - Setting user php-fpm menjadi owner dan group directory aplikasi, agar dapat mengaksesnya ```chown -R nginx:nginx /DATA/laravel_app```
- - Ubah permission directory storage dan cache menjadi 775 ```chmod -R 775 /DATA/laravel_app/storage```
+ - Ubah permission directory storage dan cache menjadi 775
+   ```
+      chmod -R 775 /DATA/laravel_app/storage
+      chmod -R 775 /DATA/laravel_app/bootstrap/cache
+   ```
  - Allow directory laravel_app, storage, dan cache di selinux
    ```
       setenforce 0
