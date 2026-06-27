@@ -8,13 +8,20 @@
    ```
  - Allow directory laravel_app, storage, dan cache di selinux
    ```
+      # Non aktifkan selinux
       setenforce 0
-   
+
+      # Tambahkan policy untuk directory (tambahkan yang pathnya spesifik dulu)
       sudo semanage fcontext -a -t httpd_sys_rw_content_t "/DATA/laravel_app/storage(/.*)?"
       sudo semanage fcontext -a -t httpd_sys_rw_content_t "/DATA/laravel_app/bootstrap/cache(/.*)?"
       sudo semanage fcontext -a -t httpd_sys_content_t "/DATA/laravel_app(/.*)?"
 
+      # Terapkan policy yang sudah ditambahkan
       sudo restorecon -Rv /DATA/laravel_app
+
+      Tambahan opsional":
+      # Cek policy selinux eksisting
+      sudo semanage fcontext -l | grep -E "/DATA|storage"
    ```
  - Setting agar aplikasi dapat konek ke database
    ```
