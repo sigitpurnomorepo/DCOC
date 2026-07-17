@@ -17,14 +17,19 @@ Action dari sisi Infrastruktur OT :
 
 Solved after : 
 Dilakukan restart pada server VM-HQ-OPC-1 10.129.18.24
-Setelah server selesai restart, dilakukan pengujian ulang dan koneksi dari VM-HQ-OPC-1 10.129.18.24 ke VM DB Scada 10.129.43.16:1433 berhasil, sehingga aplikasi kembali dapat mengakses database dengan normal
+Setelah server selesai restart, dilakukan pengujian ulang dan koneksi dari VM-HQ-OPC-1 10.129.18.24 ke VM DB Scada 10.129.43.16:1433 berhasil, 
+sehingga aplikasi kembali dapat mengakses database dengan normal
 
 Analisis Penyebab (Root Cause):
 Sistem mengalami TCP Port Exhaustion pada port 1433 akibat akumulasi koneksi stale (status TIME_WAIT atau CLOSE_WAIT) yang tidak terlepas dengan sempurna.
 Server menerapkan Windows Firewall Policy yang dikelola terpusat melalui GPO Domain (terkonfirmasi via RSOP pada PolicyStore: GPO).
-Terdapat indikasi bahwa filtering engine (WFP) mengalami beban kerja tinggi saat memproses aturan firewall yang kompleks, diperkuat dengan keberadaan Kaspersky Endpoint Security yang terintegrasi pada level network filtering (WFP) OS. Hal ini memicu respons protektif dari sistem berupa pemblokiran trafik spesifik ke segmen DB tersebut untuk menjaga stabilitas sistem.
+Terdapat indikasi bahwa filtering engine (WFP) mengalami beban kerja tinggi saat memproses aturan firewall yang kompleks, 
+diperkuat dengan keberadaan Kaspersky Endpoint Security yang terintegrasi pada level network filtering (WFP) OS. 
+Hal ini memicu respons protektif dari sistem berupa pemblokiran trafik spesifik ke segmen DB tersebut untuk menjaga stabilitas sistem.
 
 Rencana Tindakan Lanjutan (Next Action Plan):
 Identifikasi Anomali Koneksi: Menjalankan netstat -ano | findstr :1433 untuk memverifikasi penumpukan stale connection sebelum melakukan restart.
-Audit Filter & Proteksi: Menjalankan netsh wfp show filters untuk menganalisis apakah terdapat block rule spesifik. Selain itu, tim akan melakukan investigasi pada log Kaspersky Endpoint Security untuk memastikan tidak ada Network Attack Blocker atau Firewall Module yang secara otomatis memblokir IP DB saat mendeteksi pola port exhaustion.
+Audit Filter & Proteksi: Menjalankan netsh wfp show filters untuk menganalisis apakah terdapat block rule spesifik. 
+Selain itu, tim akan melakukan investigasi pada log Kaspersky Endpoint Security untuk memastikan tidak ada Network Attack Blocker atau 
+Firewall Module yang secara otomatis memblokir IP DB saat mendeteksi pola port exhaustion.
 ```
