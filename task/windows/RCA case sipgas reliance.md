@@ -28,8 +28,8 @@ diperkuat dengan keberadaan Kaspersky Endpoint Security yang terintegrasi pada l
 Hal ini memicu respons protektif dari sistem berupa pemblokiran trafik spesifik ke segmen DB tersebut untuk menjaga stabilitas sistem.
 
 Rencana Tindakan Lanjutan (Next Action Plan):
-Identifikasi Anomali Koneksi: Menjalankan netstat -ano | findstr :1433 untuk memverifikasi penumpukan stale connection sebelum melakukan restart.
-Audit Filter & Proteksi: Menjalankan netsh wfp show filters untuk menganalisis apakah terdapat block rule spesifik. 
-Selain itu, tim akan melakukan investigasi pada log Kaspersky Endpoint Security untuk memastikan tidak ada Network Attack Blocker atau 
+1. Identifikasi Anomali Koneksi: Menjalankan netstat -ano | findstr :1433 untuk memverifikasi penumpukan stale connection sebelum melakukan restart.
+2. Audit Filter & Proteksi: Menjalankan netsh wfp show filters untuk menganalisis apakah terdapat block rule spesifik. 
+3. Tim akan melakukan investigasi pada log Kaspersky Endpoint Security untuk memastikan tidak ada Network Attack Blocker atau 
 Firewall Module yang secara otomatis memblokir IP DB saat mendeteksi pola port exhaustion.
 ```
