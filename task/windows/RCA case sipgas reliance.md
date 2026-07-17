@@ -34,8 +34,8 @@ Rencana Tindakan Lanjutan (Next Action Plan):
 Firewall Module yang secara otomatis memblokir IP DB saat mendeteksi pola port exhaustion.
 
 Note dari Selmi:
-kemungkinan ada blocking juga di OS firewall karna ada tcp request yang numpuk, karna kalo gua liat settingan WFP di OS nya aktif, dan settingannya ikut Domain
-WFP (Windows Firewall Policy)  CC @DCOC
-next nya pas kejadian lagi coba cek tcp traffic detail yang numpuk port 1433 yak jalanin = netstat -ano | findstr :1433
+kemungkinan ada blocking juga di OS firewall karna ada tcp request yang numpuk, karna kalo gua liat settingan WFP di OS nya aktif, 
+dan settingannya ikut Domain WFP (Windows Firewall Policy)  
+CC @DCOC next nya pas kejadian lagi coba cek tcp traffic detail yang numpuk port 1433 yak jalanin = netstat -ano | findstr :1433
 terus cek status policy Windows Firewall Policy jalanin = netsh wfp show filters
 ```
