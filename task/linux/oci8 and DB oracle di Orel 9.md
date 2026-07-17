@@ -56,6 +56,10 @@
 
 ## Install Package Yajra for Connection Between Laravel to Oracle DB
 ```
+# Cek package yajra
+Masuk ke dir /DATA dan jalankan composer show yajra/laravel-oci8
+Jika belum terinstal akan muncul 
+<img width="944" height="228" alt="image" src="https://github.com/user-attachments/assets/7320781b-b1a2-43c7-8849-9c3b5ec828db" />
 # install package yajra (open traffic to url package yajra in firewall)
 composer require yajra/laravel-oci8:^10.0
 php artisan config:clear
