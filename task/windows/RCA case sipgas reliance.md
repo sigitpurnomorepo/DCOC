@@ -1,8 +1,8 @@
 ## RCA case sipgas dan database reliance
 ```
 Isu Trouble : 
-Koneksi dari 10.129.18.24 ke arah scada untuk database reliance tidak terkoneksi
-ip 10.129.18.24 (vm) telnet ke DB scada 10.40.43.124/10.40.43.16, 10.40.42.9 dengan port 1433 tidak bisa
+- Koneksi dari 10.129.18.24 ke arah scada untuk database reliance tidak terkoneksi
+- IP 10.129.18.24 (vm) telnet ke DB scada 10.40.43.124/10.40.43.16, 10.40.42.9 dengan port 1433 tidak bisa
 menyebabkan data dari scada reliance tidak tertarik ke sipgas menyebabkan realisasi station yang menggunakan reliance kosong semua
 
 Action dari sisi Infrastruktur IT : 
