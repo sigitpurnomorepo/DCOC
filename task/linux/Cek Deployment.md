@@ -9,7 +9,8 @@
 <br>
 
 ## Cek Deployment di VM menggunakan Git
-
+<img width="542" height="433" alt="image" src="https://github.com/user-attachments/assets/19dbbe28-b11b-4b83-accf-cf5458994b43" />
+- Login server 10.19 > cd /home/rely/partner-backoffice > git reflog atau git log > cek tanggal deployment terakhir 
 <img width="329" height="360" alt="image" src="https://github.com/user-attachments/assets/6ba704ce-3a7d-4a3a-8d8f-eaf2276a6c18" />
 
 
