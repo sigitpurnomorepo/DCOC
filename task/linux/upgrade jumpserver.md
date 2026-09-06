@@ -17,7 +17,6 @@ https://github.com/jumpserver/jumpserver/releases/tag/v4.10.19
 <img width="231" height="26" alt="image" src="https://github.com/user-attachments/assets/31cfcf63-6aa7-42f0-8d8b-74107a2fb4d1" /> 
 
 <br>
-<br>
 
 2. Go to Asset Jumpserver directory and build Docker image
 ```
