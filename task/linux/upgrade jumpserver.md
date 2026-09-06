@@ -1,5 +1,6 @@
 
-- Download Jumpserver Resource
+1. Download Jumpserver Resource
+- jumpserver-installer-v4.10.19.tar.gz
 ```
 https://github.com/jumpserver/installer/releases/download/v4.10.19/jumpserver-installer-v4.10.19.tar.gz
 ```
@@ -8,6 +9,7 @@ https://github.com/jumpserver/installer/releases/download/v4.10.19/jumpserver-in
 <br>
 <br>
 
+- jumpserver-v4.10.19.tar.gz (Asset for Docker images)
 ```
 https://github.com/jumpserver/jumpserver/releases/tag/v4.10.19
 ```
