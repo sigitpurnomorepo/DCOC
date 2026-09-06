@@ -15,9 +15,9 @@ https://github.com/jumpserver/jumpserver/releases/tag/v4.10.19
 ```
 <img width="537" height="146" alt="image" src="https://github.com/user-attachments/assets/d78e9316-31ee-40b6-ae18-6d3876cdadbc" /> <br>
 <img width="231" height="26" alt="image" src="https://github.com/user-attachments/assets/31cfcf63-6aa7-42f0-8d8b-74107a2fb4d1" /> 
-<br>
-<br>
 
+<br>
+<br>
 
 2. Go to Asset Jumpserver directory and build Docker image
 ```
@@ -27,10 +27,6 @@ docker build -t jumpserver:v4.10.19 -f Dockerfile .
 # Cek images
 docker images 
 ```
-
-<br>
-<br>
-
 4. Copy Jumpserver Installer to /opt/
 5. 
 
