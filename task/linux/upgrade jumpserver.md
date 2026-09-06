@@ -19,5 +19,10 @@ https://github.com/jumpserver/jumpserver/releases/tag/v4.10.19
 <br>
 
 
-2. Copy Jumpserver Installer to /opt/
-  
+2. Go to Asset Jumpserver directory and build Docker image
+```
+
+```
+
+4. Copy Jumpserver Installer to /opt/
+
