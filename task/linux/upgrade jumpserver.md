@@ -5,7 +5,8 @@ https://github.com/jumpserver/installer/releases/download/v4.10.19/jumpserver-in
 ```
 <img width="263" height="25" alt="image" src="https://github.com/user-attachments/assets/168932c6-f922-4288-abaa-126ffbb3ccf2" />
 
-
+<br>
+<br>
 
 ```
 https://github.com/jumpserver/jumpserver/releases/tag/v4.10.19
