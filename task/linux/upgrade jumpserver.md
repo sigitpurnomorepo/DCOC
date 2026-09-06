@@ -26,6 +26,28 @@ docker build -t jumpserver:v4.10.19 -f Dockerfile .
 # Cek images
 docker images 
 ```
-4. Copy Jumpserver Installer to /opt/
-5. 
+4. Copy Jumpserver Installer to /opt/ and go to inside of directory
+5. Backup database and file configuration Jumpserver
+```
+./jmsctl.sh backup_db
+```
+6. Snapshot VM-PAMAN
+7. Upgrade Jumpserver
+```
+./jmsctl.sh upgrade
+```
+9. Running Jumpserver service
+```
+./jmsctl.sh start
+```
+10. Cek Container Jumpserver
+11. Copy file img aplikasi ke directory /data aplikasi Jumpserver
+```
+cd /data/jumpserver/core/data/static/img/
+
+mv /home/pgnusr/img-new/logo_text.pgn .
+mv /home/pgnusr/img-new/logo_text.png .
+mv /home/pgnusr/img-new/* .
+```
+12. Login Paman dan cek fungsionalitasnya
 
