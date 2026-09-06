@@ -8,7 +8,7 @@ https://github.com/jumpserver/installer/releases/download/v4.10.19/jumpserver-in
 ```
 https://github.com/jumpserver/jumpserver/releases/tag/v4.10.19
 ```
-<img width="874" height="327" alt="image" src="https://github.com/user-attachments/assets/97fdc950-9dad-4e17-ae1d-249ff44bd4c3" />
+<img width="537" height="146" alt="image" src="https://github.com/user-attachments/assets/d78e9316-31ee-40b6-ae18-6d3876cdadbc" />
 
 
 - Copy Jumpserver Installer to /opt/
