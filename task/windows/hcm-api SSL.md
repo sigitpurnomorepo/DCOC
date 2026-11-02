@@ -11,5 +11,10 @@ Path file ssl -> C:\nginx\conf\certs
 Restart service _NginxMain
 <br />
 <img width="525" height="125" alt="image" src="https://github.com/user-attachments/assets/1aa6c18a-a7c0-48a5-a232-26b5acd9c698" />
+<br />
+Result
+<br />
+<img width="556" height="341" alt="image" src="https://github.com/user-attachments/assets/e6c378b5-0f88-4ec5-9ecb-9f478c58ebe3" />
+
 
 
