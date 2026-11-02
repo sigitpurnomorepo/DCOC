@@ -14,6 +14,8 @@ docker inspect nginx --format '{{range .Mounts}}{{println .Source "->" .Destinat
 Mengecek detail file ssl
 openssl s_client -connect localhost:443 -servername registry.pgn.co.id </dev/null 2>/dev/null | openssl x509 -noout -dates -subject -issuer
 <img width="400" height="51" alt="image" src="https://github.com/user-attachments/assets/0bbaf35e-6e7e-4bb1-8737-e061b59d20f2" />
+openssl x509 -in /data/secret/cert/server.crt -noout -subject -issuer -dates
+<img width="419" height="51" alt="image" src="https://github.com/user-attachments/assets/626dee85-362f-4590-931c-19d93f67efe5" />
 
 
 
