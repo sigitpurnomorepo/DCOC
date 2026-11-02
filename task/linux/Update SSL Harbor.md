@@ -25,9 +25,8 @@ openssl x509 -in /data/secret/cert/server.crt -noout -subject -issuer -dates
 <img width="419" height="51" alt="image" src="https://github.com/user-attachments/assets/626dee85-362f-4590-931c-19d93f67efe5" />
 <br /><br />
 Reload service nginx dalam container
-```
-docker exec nginx nginx -s reload
-```
+```docker exec nginx nginx -s reload```
+
 
 
 
