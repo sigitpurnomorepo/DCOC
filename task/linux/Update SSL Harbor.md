@@ -32,5 +32,7 @@ openssl x509 -in /data/secret/cert/server.crt -noout -subject -issuer -dates
 docker exec nginx nginx -s reload
 ```
 
+---
+
 ### 4. Result
 ![Isi Direktori SSL](https://github.com/user-attachments/assets/af78b403-49d5-447e-9148-fb67a9270546)
