@@ -12,9 +12,7 @@ docker inspect nginx --format '{{range .Mounts}}{{println .Source "->" .Destinat
 <img width="1254" height="906" alt="image" src="https://github.com/user-attachments/assets/af78b403-49d5-447e-9148-fb67a9270546" />
 <br />
 Mengecek detail file ssl <br />
-```
-openssl s_client -connect localhost:443 -servername registry.pgn.co.id </dev/null 2>/dev/null | openssl x509 -noout -dates -subject -issuer
-```
+`openssl s_client -connect localhost:443 -servername registry.pgn.co.id </dev/null 2>/dev/null | openssl x509 -noout -dates -subject -issuer`
 <br />
 <img width="400" height="51" alt="image" src="https://github.com/user-attachments/assets/0bbaf35e-6e7e-4bb1-8737-e061b59d20f2" />
 <br />
