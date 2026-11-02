@@ -1,4 +1,4 @@
-### Mengganti file SSL di VM-HQ-HCAPI 10.129.10.70
+### Mengganti file SSL hcm-api.pgn.co.id di VM-HQ-HCAPI 10.129.10.70
 
 File config -> C:\nginx\conf\nginx.conf
 <br />
