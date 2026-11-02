@@ -7,8 +7,6 @@ docker inspect nginx --format '{{range .Mounts}}{{println .Source "->" .Destinat
 
 ![Detail Path Sertifikat](https://github.com/user-attachments/assets/95485fab-296a-4c27-86f9-afea36bb5081)
 
-![Isi Direktori SSL](https://github.com/user-attachments/assets/af78b403-49d5-447e-9148-fb67a9270546)
-
 ---
 
 ### 2. Mengecek Detail File SSL
@@ -33,3 +31,6 @@ openssl x509 -in /data/secret/cert/server.crt -noout -subject -issuer -dates
 ```bash
 docker exec nginx nginx -s reload
 ```
+
+### 4. Result
+![Isi Direktori SSL](https://github.com/user-attachments/assets/af78b403-49d5-447e-9148-fb67a9270546)
