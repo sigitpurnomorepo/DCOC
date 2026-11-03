@@ -91,8 +91,8 @@ mount -a
 //Reboot dan setelah itu cek partisi disk
 df -hT
 ```
-3. Install Sophos
+3. Expand volume root VM-DEV-RUNNER Sangfor 
 ```bash
-./SophosSetup.sh
+  // Ex
 ```
-4. Cek apakah asset vm sudah ada di Sophos Central
+
